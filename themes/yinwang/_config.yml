@@ -4,7 +4,7 @@ language: en
 
 # 导航栏
 menu:
-  语雀: https://www.52chf.cn
+  谁: https://www.52chf.cn
   关于: /about
 
 # 图标
@@ -19,8 +19,8 @@ header:
 
 # Footer
 footer:
-  display: true               # 是否显示footer
-  context: "© smallyu.net"     # footer内容
+  display: false               # 是否显示footer
+  context: "© 夏是谁"     # footer内容
 
 # 文章页
 post:

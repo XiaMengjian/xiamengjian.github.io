@@ -4,7 +4,7 @@ language: en
 
 # 导航栏
 menu:
-  语雀: https://www.yuque.com/smallyu
+  语雀: https://www.52chf.cn
   关于: /about
 
 # 图标
@@ -19,14 +19,14 @@ header:
 
 # Footer
 footer:
-  display: false               # 是否显示footer
+  display: true               # 是否显示footer
   context: "© smallyu.net"     # footer内容
 
 # 文章页
 post:
   blank: true        # 文章是否新标签页打开
-  backHome: false     # 文章末尾是否显示返回首页
-  backHome_hr: false  # 返回首页前是否显示分割线
+  backHome: true     # 文章末尾是否显示返回首页
+  backHome_hr: true  # 返回首页前是否显示分割线
   backHome_prefix: "↶ "       # 返回首页的前缀内容
   backHome_content: "返回首页"  # 返回首页的主体内容
   backHome_suffix: ""          # 返回首页的后缀内容

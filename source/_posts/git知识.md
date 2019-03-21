@@ -20,10 +20,33 @@ git config --global user.email 'myEmail'
 2. global 当前用户所有仓库有效
 3. system 对系统所有登录用户有效
 
-查看config配置信息，添加 --list
+查看config配置信息，添加 --list 如果没指定范围（--global） 默认显示所有的配置
 `git config --list --global`
+`git config --list --local` _需要在对应的git工程里_
 ![](/media/15531595805175.jpg)
 
 
+# 建立仓库
+`git init` or `git init your_project` (无代码情况)
 
+```
+git add <files>  文件加入到git跟踪 此时文件是在stage中
+git add -u 对于已经跟踪的文件update 可以通过-u 来加入暂存区
+git commit -m '' 
+
+git checkout -- <file> 丢弃暂存区的某个文件
+git rm --cached <file> 剔除暂存区 to unstage
+git reset HEAD <file>  to unstage
+
+git status 查看工作区以及暂存状态
+git log (--pretty=oneline)看日志
+```
+
+
+## 暂存区概念
+
+![暂存区](/media/15531607337438.jpg)
+
+
+ 
 

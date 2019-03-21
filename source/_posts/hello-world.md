@@ -42,5 +42,9 @@ $ hexo deploy
 More info: [Deployment](https://hexo.io/docs/deployment.html)
 
 
+1. 浏览器跨域问题 跨域不一定是浏览器限制了发起跨域请求，也可能是跨域请求可以正常发起，但是返回的数据被浏览器截获。有些浏览器不允许从HTTPS的网站跨域访问HTTP, 比如Chorme 和 Firefox,这些浏览器在请求还未发出时就会拦截请求。 
+2. 
+
+
 
 

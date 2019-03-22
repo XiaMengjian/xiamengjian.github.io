@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width, initial-scale=0.5"><link rel="stylesheet" href="/css/post.css"><link rel="icon" href="/img/favicon.png"><title>git知识</title></head><body>　　<div class="inner"><h2>git知识</h2><h1 id="最小配置"><a href="#最小配置" class="headerlink" title="最小配置"></a>最小配置</h1><p>配置user.name,user.email</p>
+<pre><code>git config --global user.name &apos;myName&apos;
+git config --global user.email &apos;myEmail&apos;
+</code></pre><h3 id="global-的作用："><a href="#global-的作用：" class="headerlink" title="global 的作用："></a>global 的作用：</h3><p>变更信息上带上用户信息，可以方便快速的查找到作者，同时能够发送邮件到相应email</p>
+<p>除了 global之外 <code>git config</code> 还能设置</p>
+<ol>
+<li>local  只针对某个仓库       默认</li>
+<li>global 当前用户所有仓库有效</li>
+<li>system 对系统所有登录用户有效</li>
+</ol>
+<p>查看config配置信息，添加 –list<br><code>git config --list --global</code><br><img src="/media/15531595805175.jpg" alt></p>
+<h3 id="dependencies和devDependencies的区别"><a href="#dependencies和devDependencies的区别" class="headerlink" title="dependencies和devDependencies的区别"></a>dependencies和devDependencies的区别</h3><p>除了字面的含义的区别，</p>
+<p>dependencies和devDependencies的区别还在于：</p>
+<p>如果你的项目是发布到npm的一个包，<br>那么这个包的package.json中的dependencies中的依赖是会被下载下来到这个包的node_modules文件夹中的（如果你的项目本身没有这个依赖），而devDependencies不会。</p>
+<p>举个例子：<br>我发布了一个组件A，它有dependencies：lodash和devDependencies：moment。<br>那么，如果你的项目npm install 了组件A。<br>除非你的项目也依赖了lodash并且版本一致，那么项目的node_modules/A下会有一个node_modules，里面会有lodash。<br>而 moment，则无论如何也不会出现在你的项目中。</p>
+<p>至于一般的项目，不管你是安装在dev还是dependencies中，安装的时候都会安装，打包的时候都会被打进去的，区分依赖只是为了让项目看起来更加清晰。</p>
+<hr><p><span>↶ </span><a href="/">返回首页</a><span></span></p></div><script src="/js/jquery.min.js"></script><script src="/js/main.js"></script></body></html>

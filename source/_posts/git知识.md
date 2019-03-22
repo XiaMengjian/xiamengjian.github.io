@@ -24,6 +24,19 @@ git config --global user.email 'myEmail'
 `git config --list --global`
 ![](/media/15531595805175.jpg)
 
+### dependencies和devDependencies的区别
+除了字面的含义的区别，
 
+dependencies和devDependencies的区别还在于：
 
+如果你的项目是发布到npm的一个包，
+那么这个包的package.json中的dependencies中的依赖是会被下载下来到这个包的node_modules文件夹中的（如果你的项目本身没有这个依赖），而devDependencies不会。
+
+举个例子：
+我发布了一个组件A，它有dependencies：lodash和devDependencies：moment。
+那么，如果你的项目npm install 了组件A。
+除非你的项目也依赖了lodash并且版本一致，那么项目的node_modules/A下会有一个node_modules，里面会有lodash。
+而 moment，则无论如何也不会出现在你的项目中。
+
+至于一般的项目，不管你是安装在dev还是dependencies中，安装的时候都会安装，打包的时候都会被打进去的，区分依赖只是为了让项目看起来更加清晰。
 

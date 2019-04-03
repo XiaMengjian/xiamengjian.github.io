@@ -389,3 +389,60 @@ new webpack.ProvidePlugin({
 }),
 
 ```
+
+
+eslint 和 DefinePlugin 冲突问题： 
+
+```
+    'node/no-deprecated-api': ['error', {
+      'ignoreModuleItems': [],
+      'ignoreGlobalItems': ['GLOBAL']
+    }]
+```
+
+axios `baseURL`将被添加到`url`前面，除非`url`是绝对的
+baseURL —— 基础URL路径，假如url不是绝对路径，如https://some-domain.com/api/v1/login?name=jack,那么向服务器发送请求的URL将会是baseURL + url。
+
+
+inline script 
+
+```js
+inline script is a script that is not loaded from an external file, but embedded inside HTML.
+<script>alert(1);</script>
+
+<img src=x onerror=alert(1)>
+```
+
+external scripts
+
+```js
+<script src="http://example.com/script.js"></script>
+
+<script src="/script.js"></script>
+```
+
+
+defineplugin
+
+```
+每个传进DefinePlugin的键值都是一个标识符或者是多个.连接起来的标识符。
+
+如果这个值是一个字符串。它会当做一个代码片段来执行
+
+如果这个值不是字符串，它会被转换成字符串。
+
+如果这个值是一个对象，它所有的key会被同样的方式定义
+
+如果站在一个key前面加了typeof，它会被定义为typeof调用
+```
+
+
+
+vue cli3总已经使用了TerserPlugin
+
+   webpackConfig
+        .mode('production')
+        .devtool(options.productionSourceMap ? 'source-map' : false)
+        .output
+          .filename(filename)
+          .chunkFilename(filename)
